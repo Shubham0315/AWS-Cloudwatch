@@ -41,6 +41,33 @@
 
 # Practical Demo
 
+- Top features of Cloudwatch are :- Logs, Metrics, Alarms, Dashboards, ServiceLens
+
+1. Log Groups
+- Go to Cloudwatch and go to Log Groups. Cloudwatch automatically creates groups for our logs based on our use of particular service
+  e.g:- Earlier we created Code Build service. So it has created log group for that for code build logs.
+- Here cloudwatch was observing the activities in code build service. So cloudwatch logged everything happening for that project.
+- If we go to log stream, we can get how many times we've done changes and build.
+  Even if we have deleted any project, we can come to cloudwatch and get information about success or errors.
+
+<img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/0a9fcd61-2b24-4d1c-9c6c-cb6fb05b286d">
+
+<img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/df691118-750c-488b-9e3e-bcd226272553">
+
+2. Metrics
+- It helps to collect information about AWS resources.
+- If we go to "All Metrics", we get "N" default metrics (130 here) which is being tracked all the time on our account. It will collect all information of all services in use,
+
+<img width="943" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/93751a67-b821-4d94-a09c-4aa22cf74c2a">
+
+- If we go inside any of the metrics, we get the information about all the metrics inside a service
+
+<img width="791" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/736f6345-aa90-43a6-ada2-623929090b69">
+
+- If here we go inside EC2 and want to get CPU Utilization, we will click on the same and get insights.
+
+** Now Create an EC2 Instance
+- The script inside Custom_Metrics folder is to increase or decarease the CPU utilization of EC2 and to track metrics information on cloudwatch
 
 
 
