@@ -3,7 +3,7 @@
 
 - Amazon CloudWatch is a powerful monitoring and management service designed to provide actionable insights into AWS resources, applications, and services.
 - It is service watching Cloud Activities just like gatekeeper for AWS Cloud. It watches EC2 creation, upload to S3 buckets, creating resources. We can find these activities logged with AWS Cloud Watch
-- To keep eye what activities are down on our AWS Account
+- To keep eye what activities are done on our AWS Account
 - It helps in monitoring, alerting, reporting and logging. Using these features of CloudWatch we can keep track of activities that are happening on our AWS Account
 
 # Uses of AWS Cloudwatch
