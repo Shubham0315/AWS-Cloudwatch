@@ -55,34 +55,69 @@
 # Practical Demo
 
 - Top features of Cloudwatch are :- Logs, Metrics, Alarms, Dashboards, ServiceLens
+- Cloudwatch dashboard :-
 
-1. Log Groups
-- Go to Cloudwatch and go to Log Groups. Cloudwatch automatically creates groups for our logs based on our use of particular service
-  e.g:- Earlier we created Code Build service. So it has created log group for that for code build logs.
-- Here cloudwatch was observing the activities in code build service. So cloudwatch logged everything happening for that project.
+![image](https://github.com/user-attachments/assets/60f91a10-53bc-48e1-b747-aed2b13a7006)
+
+Log Groups
+-
+- Go to Cloudwatch - Log Groups.
+- Cloudwatch automatically creates groups for our logs based on our use of particular service
+  - e.g:- Earlier we created Code Build service. So it has created log group for that for the activities in code build .
+- Here cloudwatch was observing the activities in code build service tracking activities inside it. So cloudwatch logged everything happening for that project.
+  - It gives info like how all the stages were performed for the pipeline, build service. Entire log of build process is available (just like jenkins)
 - If we go to log stream, we can get how many times we've done changes and build.
-  Even if we have deleted any project, we can come to cloudwatch and get information about success or errors.
+- Even if we have deleted any project, we can come to cloudwatch and get information about success or errors.
 
-<img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/0a9fcd61-2b24-4d1c-9c6c-cb6fb05b286d">
+![image](https://github.com/user-attachments/assets/3506e518-77f2-4738-bec7-19e8853a53a6)
+![image](https://github.com/user-attachments/assets/5da6c32f-4463-4a5f-ad50-bab4041bc20c)
+![image](https://github.com/user-attachments/assets/6fbc097f-6ee4-44b0-a0b5-5d861a65fef0)
 
-<img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/df691118-750c-488b-9e3e-bcd226272553">
+- We can even check logs for specific time duration
 
-2. Metrics
-- It helps to collect information about AWS resources.
-- If we go to "All Metrics", we get "N" default metrics (130 here) which is being tracked all the time on our account. It will collect all information of all services in use,
+![image](https://github.com/user-attachments/assets/73ec93aa-5d7e-40b8-b5ba-24334c0acb19)
 
-<img width="943" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/93751a67-b821-4d94-a09c-4aa22cf74c2a">
+- Here not only successful logs are recorded but also failed events are recorded.
+
+![image](https://github.com/user-attachments/assets/304b30d9-d3fc-47a4-bb87-18c484c97393)
+
+- It can also give you log insights (will see later)
+
+![image](https://github.com/user-attachments/assets/d0571e50-1571-47e2-99db-8565bd2fadbe)
+
+Metrics
+-
+- It helps to collect information about AWS resources like EC2 CPU, EC2 Disk usage. 
+- If we go to "All Metrics", we get "N" default metrics (410 here) which is being tracked all the time on our account. It will collect all information of all services in use.
+  - We can see how many metrics are associated with each service.
+
+![image](https://github.com/user-attachments/assets/55efc5d4-56ff-4664-bee2-00f2008bc168)
+
+- We can check every service's dashboard by clicking on metics link as below
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/dfa259ad-e440-47ca-9a16-be935fb5ca81" />
+
+  - Here we can see all the deault dashboards created
+
+![image](https://github.com/user-attachments/assets/dd738249-d18b-42f7-ab20-ecddba7c50d2)
 
 - If we go inside any of the metrics, we get the information about all the metrics inside a service
+  - If we've CPU utilization metrics, we can see how our EC2 was performing for specific time frame
 
-<img width="791" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/736f6345-aa90-43a6-ada2-623929090b69">
+![image](https://github.com/user-attachments/assets/4f96c709-0cd9-4083-9c25-49861f4aede8)
 
 - If here we go inside EC2 and want to get CPU Utilization, we will click on the same and get insights.
 
 ** Now Create an EC2 Instance
-- The script inside Custom_Metrics folder is to increase or decarease the CPU utilization of EC2 and to track metrics information on cloudwatch
+- Launch one instance
+- Write python application to vary the CPU and check the metrics
+- The script inside Custom_Metrics folder is to increase or decarease the CPU utilization of EC2 and to track metrics information on cloudwatch (cpu_spike.py)
 
-- Login to EC2 and check the metrics of EC2 now
+![image](https://github.com/user-attachments/assets/2e4f40cd-fe3d-401e-b922-d5bdb5c60912)
+
+- Login to EC2 using UI and if we check "top" everything will be normal.
+
+- Now go to cloudwatch and go to EC2 and check the metrics of EC2 now there will be nothing
 
 <img width="800" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/d1acc7a9-5969-4d67-86c4-d5df89415860">
 
