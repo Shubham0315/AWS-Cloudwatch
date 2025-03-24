@@ -160,14 +160,16 @@ Metrics
 
 <img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/0ab25d91-5e80-4229-97c9-0297c86ef091">
 
-- We can select the metrics and go to "Graphed Metrics" to set Average, Minimum, Maximun. But in organizations, we do average metrics
+- We can select the metrics and go to "Graphed Metrics" to set/check Average, Minimum, Maximun. But in organizations, we do average metrics.
 
 <img width="908" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/d5279735-2638-442f-a326-54cfea00cc0c">
 
+- When we stop the spike file, CPU utilization comes to normal
 
-3. Alarms
+Alarms
+-
 - Now we got the required information about CPU but we need to act upon it. If we see issues, we as DevOps engineers need to report them.
-- We can do them by setting alarms.
+- We can do this by setting/configuring alarms.
 - We have now simulated the metrics. But now how to act on the metrics is work of alarm.
 - We can set up alarm so that it notifies us if something goes wrong in critical systems.
 
