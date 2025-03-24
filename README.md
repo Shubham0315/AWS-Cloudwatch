@@ -11,10 +11,10 @@
 
 # Uses of AWS Cloudwatch
 
-1. Monitoring
+#1. Monitoring
 - We can implement monitoring using CloudWatch as its very imp for DevOps engineer. It plays important role in Infrastructure monitoring but still we can do app monitoring as well
 
-2. Real Time Metrics
+#2. Real Time Metrics
 - It allows to get Real time metrics
 - Cloudwatch helps in telling us what metrics we're getting for our AWS services
 - While using EC2, Metrics can be :-
@@ -23,25 +23,25 @@
 - Metrics helps in understanding the utilization or details of AWS services.
 - Metrics are easy way to communicate with users.
 
-3. Alarms
+#3. Alarms
 - Metrics and alarms are very closely associated
 - If we collect metrics for CPU utilization, user will go to metrics dashboard and observes that conveying CPU utilization. We've collected metrics, but we need to take actions on that if CPU is getting full. We need to take action on metrics outcome. So our responsibility will not only be to collect the metrics but also take actions on metrics outcome
 - So cloudwatch, if our memory goes above some threshold we've set, we can configure alarm such as to send email notification to us or send an alarm of consumption.
 - Thus both Metrics and Alarms are closely associated.
 
-4. Logging
+#4. Logging
 - CloudWatch also gives us log insights. Provides logs of a service accessing other service. Logging here happens automatically.
 - Earlier we connected our EC2 with Code pipeline/deploy. If we go to cloudwatch and looks out for logs, we can see our EC2 was trying to connect with one of the AWS service with timestamp.
 
-5. Custom metrics.
+#5. Custom metrics.
 - CPU Utilization is default metrics. By default Cloudwatch tracks CPU utilization for EC2 but it doesnt track memory utilization of EC2.
 - Here we need to enhance cloudwatch by sending custom metrics to cloudwatch. Using this, we can track our application, its memory, etc.
 
-6. Cost Optimization
+#6. Cost Optimization
 - The primary reason to switch to AWS is to reduce maintenance and enhance security. Another thing is cost optimization.
 - To reduce cost of our AWS services and Account.
 
-7. Scaling Resources
+#7. Scaling Resources
 - Cloudwatch doesnt directly perform cost optimization or scaling. But it can integrate with other services like lambda and help in reducing cloud cost.
 - It also helps in identifying unused resources on our AWS account.
 - CloudWatch also helps in scaling.
@@ -50,6 +50,7 @@
 
 ** Thus there are "default metrics" configured in cloud watch. If we ned to enhance CloudWatch, we can use "Custom Metrics"
 
+---------------------------------------------------------------------------------------------------------------------------------
 
 # Practical Demo
 
