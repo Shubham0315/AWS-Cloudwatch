@@ -5,7 +5,7 @@ def simulate_cpu_spike(duration=30, cpu_percent=80):
     start_time = time.time()
 
     # Calculate the number of iterations needed to achieve the desired CPU utilization
-    target_percent = cpu_percent / 100
+    target_percent = cpu_percent / 100 
     total_iterations = int(target_percent * 5_000_000)  # Adjust the number as needed
 
     # Perform simple arithmetic operations to spike CPU utilization
