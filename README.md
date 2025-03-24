@@ -173,42 +173,60 @@ Alarms
 - We have now simulated the metrics. But now how to act on the metrics is work of alarm.
 - We can set up alarm so that it notifies us if something goes wrong in critical systems.
 
-- To create alarm, select metrics needed (EC2 here). Then specify metric and condition. Keep maximum of 1 min, cloudwatch will get metrics from EC2. Configure the conditions below (greater than). Then configure actions how we want to send notifications (create topic with name and email address). Topic means notification we're sending. Then setup the alarm
+- To create alarm Go to alarm - select metrics needed (EC2 here) - Per instance metrics
 
-<img width="926" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/9422b316-644c-4622-8b81-35369fcfd304">
+![image](https://github.com/user-attachments/assets/d9ccd007-0d6a-4c5c-9619-a465fdc742cc)
+<img width="956" alt="image" src="https://github.com/user-attachments/assets/4077e511-1284-4eae-ae72-bc56d9833aac" />
 
-<img width="956" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/a4abe80f-e2e8-4b2a-9e1f-ac0e9049204d">
+- Seach for the instance CPU utilization metrics - Select it - Set alarm statistics - Maximum and for 1 min
+  - So every minute, cloudwatch will watch the EC2, get metrics from EC2 and if maximum is reaching a threshold (50% here), we can create notification.
 
-<img width="626" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/57e9e272-fae7-4c7b-a4b6-583b4c68c789">
+![image](https://github.com/user-attachments/assets/914e6da0-b289-4b6f-93f5-a5710325f815)
+![image](https://github.com/user-attachments/assets/2e7b815d-3337-453c-9066-29519761bbec)
+![image](https://github.com/user-attachments/assets/f92bd92b-5ecb-4cab-bebe-d0ae53bc46a0)
 
-<img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/9c381dee-5a65-42e6-bf81-24c0c1f504aa">
+  - We'll use SNS topic to send notification/email. But for now Create new topic - Provide name - Provide email address - Create topic
+  - Topic means notification we've to send
 
-<img width="819" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/620f6f85-73e3-481e-8364-5a87de39c8ef">
+![image](https://github.com/user-attachments/assets/cda1815e-fc76-42d7-b24a-5c575f661430)
 
-- In this way alarm is created. But this alarm is not yet activated. We get insufficient data error like below.
+  - Now provide alarm name
 
-<img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/f08f7140-327d-45e4-9b67-e98c8bafc836">
+![image](https://github.com/user-attachments/assets/23e8c584-0661-4d34-8ed2-035b2372b91b)
 
-- This is due to we havent activated same from email address. We have to confirm the same from email which we got in inbox. After that we can see below.
+  - We can see alarm is configured
 
- <img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/75018713-cdb9-4056-be24-1c8d106f261c">
-
-
-- Now we've to trigger alarm from terminal. We have program for that is script. Run it again to get below
-
-<img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/609f0a7b-d857-496c-80a1-84daf4ea974b">
-
-
+![image](https://github.com/user-attachments/assets/949123b9-adde-4df3-980a-9b6b21b32e0b)
 
 
+- Alarm is created nbut not activated yet
 
+![image](https://github.com/user-attachments/assets/a7a20cde-4209-4454-9004-c5b972f42221)
 
+- Its due to we havent activated from email address. We have got mail we need to approve it
 
+![image](https://github.com/user-attachments/assets/3ef8e345-1ee6-4a89-866e-dadd22c99375)
+![image](https://github.com/user-attachments/assets/0d278da2-f6c6-4ae2-b7c7-9c7a98d70b0f)
 
+  - Now we can go to alarms to check if alarm is activated - Status if OK
 
+![image](https://github.com/user-attachments/assets/d97b705e-f86b-41d7-bb2c-bed03a74943a)
 
+  - Now to receive notification we need to trigger alarm
+  - Again run the cpu_spike script. Cloudwatch alarm will get triggered now
+  - Go inside alarm we can see CPU spiked above 50
 
+![image](https://github.com/user-attachments/assets/4c2e03b9-adb7-4949-8127-2eb016547035)
+![image](https://github.com/user-attachments/assets/9e3e7b87-7d00-4729-87fe-ba850e4d6cf0)
 
+  - As limit is breached, we get the notification now over mail.
+
+![image](https://github.com/user-attachments/assets/b8cb3b95-4e91-4951-a255-3fc687e625b3)
+
+  - Now we can go to SNS topic. There inside our topic we can see status as confirmed over mail
+
+![image](https://github.com/user-attachments/assets/1d4d71de-acb9-4efa-8630-b2c6012d5e0c)
+![image](https://github.com/user-attachments/assets/c8b3d149-1375-4525-83b2-41bd7c4bafa6)
 
 
 
