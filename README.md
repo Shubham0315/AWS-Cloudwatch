@@ -127,18 +127,31 @@ Metrics
 
 - Go back to EC2, select "Monitoring", we'll get all the information related to CloudWatch only
 
-<img width="812" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/028dd442-ae2b-4b90-bf7e-a43e50003802">
+![image](https://github.com/user-attachments/assets/d06aad6b-ad1a-420a-bd7f-817c120b65ac)
 
-If we expand the CPU Utilization there, we get below
+- If we expand the CPU Utilization there, we get below
 
-<img width="945" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/466e8f3a-345b-4c1d-a679-5dccc78e75ce">
+![image](https://github.com/user-attachments/assets/c13d54a6-391e-450e-bfe1-c6759f189d67)
 
 - By default, EC2 sends request to metrics every 5 mins. We can go to "Managed Detailed Monitoring" here and enable it so it will send matrics every one min.
 
-<img width="832" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/e9c0db0e-f0d9-491e-b64c-24ae844f5761">
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/68820bc3-90c2-4bfd-ac8c-30eace4bdd27" />
 
-- Configure cpus_spike.py file into our EC2 terminal and run it
-- Now if we check CPU Usage of metrics, we can see spike in it
+- Now we can check the metrics in AWS Cloudwatch console as well
+
+- Configure cpus_spike.py file into our EC2 terminal and run it to increase spike of CPU
+  - Command :- **python3 cpu_spike.py**
+ 
+![image](https://github.com/user-attachments/assets/88ce1953-7364-490f-9090-d8ef54cea5fd)
+
+- If we check CPU Utilization metrics inside EC2, and set time to 1 sec or so, we can see below spike
+
+![image](https://github.com/user-attachments/assets/1368fe77-e6cc-4dd5-a463-e332e35b25c1)
+
+- Now if we check CPU Usage of metrics, we can see spike in it. Search by instance ID and then CPUUtilization
+
+![image](https://github.com/user-attachments/assets/52493ba5-0607-48ce-bc85-f6359be1346b)
+
 
 <img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/0ab25d91-5e80-4229-97c9-0297c86ef091">
 
