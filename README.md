@@ -152,6 +152,11 @@ Metrics
 
 ![image](https://github.com/user-attachments/assets/52493ba5-0607-48ce-bc85-f6359be1346b)
 
+- We can also get the iformation of metrics in pie chart, bar graph etc. To get more easier view.
+
+![image](https://github.com/user-attachments/assets/3f578dba-792c-47db-af11-c355943b71ea)
+![image](https://github.com/user-attachments/assets/071b8c99-e34f-4761-8475-81f1d7c8e668)
+
 
 <img width="959" alt="image" src="https://github.com/Shubham0315/AWS-Cloudwatch/assets/105341138/0ab25d91-5e80-4229-97c9-0297c86ef091">
 
